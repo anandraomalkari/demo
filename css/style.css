@@ -905,7 +905,24 @@ button {
 .next {
   right: 0;
 }
+@media (max-width: 768px){
+  .banner-content h1, p{
+    font-size: 16px;
+  }
+  .button1 b{
+    width: 100px;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 10px;
+  }
 
+  .button2 b{
+    width: 100px;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+}
 /* End Banner */
 
 
@@ -1019,7 +1036,7 @@ button {
     width: 100%;
   }
   .choose-us-item{
-    width: 500px;
+    width: 416px;
   }
   .choose-us-item:hover {
     box-shadow: 0 0 2rem #af2724;
@@ -1031,13 +1048,14 @@ button {
 @media (max-width: 400px){
   .why-choose-us{
     flex-direction: column;
-    width:90%;
+    width: 100%;
     height: auto;
     padding: 20px 0px;
     align-items: center;
   }
   .choose-us-item{
-    width: 500px;
+    margin-left: -30px;
+    width: 406px;
   }
   .choose-us-item:hover {
     box-shadow: 0 0 2rem #af2724;
@@ -1189,13 +1207,17 @@ button {
 
 @media (max-width: 768px){
   .vcontainer{
+    margin: 2px;
     width: 100%;
+    height: 300px;
   }
 }
 
 @media (max-width: 400px){
   .vcontainer{
-    width: 100%;
+    margin: 2px;
+    padding: 5px;
+    width: 96%;
   }
 }
 /* End Presentation */
@@ -1231,6 +1253,7 @@ button {
 
 .branding .branding-content h3 {
   font-size: 3rem;
+  font-weight: 600;
   word-spacing: .2rem;
   line-height: 1.1;
   color: #666666;
@@ -1248,10 +1271,17 @@ button {
   .branding{
     top: 0px;
     flex-direction: column;
-    width:100%;
+    width: 100%;
     height: auto;
     padding: 30px 10px;
+    margin: 8px;
     align-items: center;
+  }
+  .branding .branding-content h3{
+    font-size: 34px;
+  }
+  .branding .branding-content p{
+    font-size: 16px;
   }
   .branding .branding-content img{
     width: 30rem;
@@ -1269,7 +1299,7 @@ button {
     align-items: center;
   }
   .branding .branding-content img{
-    width: 30rem;
+    width: 25rem;
     padding: 10px;
   }
 }
@@ -1414,6 +1444,19 @@ button {
   -webkit-transform: translateX(-10px);
   transform: translateX(-10px);
 }
+@media (max-width: 768px){
+  .client_section{
+    width: 100%;
+  }
+  .box{
+    width: 100%;
+  }
+  .detail-box{
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+  }
+}
 /* End Candidates Views */
 
 
@@ -1467,6 +1510,34 @@ button {
   background-color: #af2724; /* Updated background color on hover */
   color: #fff; /* Updated text color on hover */
   box-shadow: 0 0 20px white;
+}
+
+@media (max-width: 768px){
+  #special-section{
+    width: 100%;
+    height: 300px;
+  }
+  .special-content h2{
+    font-size: 24px;
+  }
+  .special-content h3{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px){
+  .branding{
+    top: 0px;
+    flex-direction: column;
+    width:100%;
+    height: auto;
+    padding: 30px 10px;
+    align-items: center;
+  }
+  .branding .branding-content img{
+    width: 25rem;
+    padding: 10px;
+  }
 }
 /* End get connected */
 

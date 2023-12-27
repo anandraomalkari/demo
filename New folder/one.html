@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* client gallery */
+      .wrapper {
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        position: relative;
+      }
+      .wrapper h2 {
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        color: #666666;
+      }
+      .gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .gallery .image {
+        padding: 15px;
+      }
+
+      .gallery .image span {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .gallery .image img {
+        margin: 15px;
+        padding: 15px;
+        width: 150px;
+        transition: all 0.3s ease;
+      }
+
+      .gallery .image:hover img {
+        transform: scale(1.1);
+        border: 2px solid #000;
+      }
+
+      .preview-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        background: #fff;
+        max-width: 700px;
+        width: 100%;
+        z-index: 5;
+        opacity: 0;
+        pointer-events: none;
+        border-radius: 3px;
+        padding: 0 5px 5px 5px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .preview-box.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+        transition: all 0.3s ease;
+      }
+
+      .preview-box .details {
+        display: flex;
+        align-items: center;
+        padding: 12px 15px 12px 10px;
+        justify-content: space-between;
+      }
+
+      .preview-box .details .title {
+        display: flex;
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      .details .title p {
+        margin: 0 5px;
+      }
+
+      .details .title p.current-img {
+        font-weight: 500;
+      }
+
+      .details .icon {
+        color: #007bff;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .preview-box .image-box {
+        display: flex;
+        width: 100%;
+        position: relative;
+      }
+
+      .image-box .slide {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #000;
+        font-size: 30px;
+        cursor: pointer;
+        height: 50px;
+        width: 20px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 3px;
+      }
+
+      .slide.prev {
+        left: 0px;
+      }
+
+      .slide.next {
+        right: 0px;
+      }
+
+      .image-box img {
+        width: 100%;
+        border-radius: 0 0 3px 3px;
+      }
+
+      .shadow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        display: none;
+        background: rgba(0, 0, 0, 0.45);
+      }
+
+      @media (max-width: 1000px) {
+        .gallery .image {
+          width: calc(100% / 2);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .gallery .image {
+          width: 100%;
+          padding: 4px;
+        }
+      }
+      /* End */
+    </style>
+  </head>
+  <body>
+    <!-- Client Gallery -->
+
+    <div class="wrapper">
+      <h2>Client Gallery</h2>
+      <div class="gallery">
+        <div class="image">
+          <span><img src="/images/01.jpg" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/02.jpg" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/l2.png" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/l1.png" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/05.jpg" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/06.jpg" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/07.jpg" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/l3.png" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/09.jpg" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/11.jpg" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/12.jpg" alt="" /></span>
+        </div>
+        <div class="image">
+          <span><img src="/images/10.jpg" alt="" /></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="preview-box">
+      <div class="details">
+        <div class="current-img"></div>
+        <div class="total-img"></div>
+        <!-- <span class="title">Image <p class="current-img"></p> of <p class="total-img"></p></span> -->
+        <span class="icon fas fa-times"></span>
+      </div>
+      <div class="image-box">
+        <div class="slide prev"><i class="fa fa-angle-left"></i></div>
+        <div class="slide next"><i class="fa fa-angle-right"></i></div>
+        <img src="" alt="" />
+      </div>
+    </div>
+    <div class="shadow"></div>
+
+    <!-- End -->
+  </body>
+</html>
